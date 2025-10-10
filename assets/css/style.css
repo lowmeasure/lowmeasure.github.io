@@ -1,0 +1,81 @@
+html {
+  @font-face {
+    font-family: "Sax Mono";
+    src: url("assets/saxmono.ttf") format ("ttf");
+    font-style: normal;
+    font-weight: normal;
+  }
+  font-family: "Sax Mono", monospace;
+  margin: 0.5rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: 0.0625rem solid black;
+}
+
+h1 {
+  border-bottom: 0.0625rem solid black;
+}
+
+nav#links {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.0625rem solid black;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+
+nav#links a {
+  margin: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav#links a:hover {
+  color: blue;
+}
+
+nav#links a:click {
+  color: blue;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+img#photo {
+  width: 100px;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+#photo-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+img#hero-photo {
+  width: 200px;
+
+}
