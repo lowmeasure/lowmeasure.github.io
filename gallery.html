@@ -1,0 +1,12 @@
+---
+layout: default
+title: Gallery
+---
+<h3 class="section-label">Gallery</h3>
+<section id="gallery">
+  {% for file in site.static_files %}
+    {% if file.extname == ".jpg" %}
+      <img class="gallery-photo" src="{{ file.path }}" alt="{{ file.name }}" />
+    {% endif %}
+  {% endfor %}
+</section>

@@ -1,0 +1,12 @@
+---
+layout: default
+title: News
+---
+<section id="news">
+  {% for post in site.posts %}
+    {% if post.categories contains "news" %}
+      <p>{{ post.month }} {{ post.day }} </p>
+      <p>{{ post.content }}</p>
+    {% endif %}
+  {% endfor %}
+</section>
