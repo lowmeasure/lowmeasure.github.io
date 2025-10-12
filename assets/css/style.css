@@ -1,22 +1,17 @@
+@font-face {
+  font-family: "Sax Mono";
+  src: url("/assets/fonts/saxmono.ttf") format("truetype");
+}
+
 html {
-  @font-face {
-    font-family: "Sax Mono";
-    src: url("assets/saxmono.ttf") format ("ttf");
-    font-style: normal;
-    font-weight: normal;
-  }
   font-family: "Sax Mono", monospace;
-  margin: 0.5rem;
 }
 
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  margin: 0.5rem;
-  margin-bottom: 0.25rem;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
 
 main {
@@ -33,7 +28,18 @@ h1 {
   border-bottom: 0.0625rem solid black;
 }
 
-nav#links {
+h3.section-label {
+  text-align: center;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+nav#footer-links {
   display: flex;
   flex-direction: row;
   border-bottom: 0.0625rem solid black;
@@ -41,41 +47,199 @@ nav#links {
   flex-wrap: wrap;
 }
 
-nav#links a {
+nav#footer-links a {
   margin: 0.5rem;
-  text-decoration: none;
+}
+
+a {
   color: inherit;
+  text-decoration: none;
 }
 
-nav#links a:hover {
+a:click {
   color: blue;
 }
 
-nav#links a:click {
+a:hover {
   color: blue;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-img#photo {
-  width: 100px;
-  border-radius: 1rem;
-  margin: 0.5rem;
-}
-
-#photo-container {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: max-content;
 }
 
 img#hero-photo {
   width: 200px;
 
+}
+
+div#nav-div {
+  display: flex;
+}
+
+.main-nav {
+  justify-content: space-between;
+  display: flex; 
+}
+
+.main-nav a {
+  margin: 0 0.5rem 0.25rem 0.5rem;
+}
+
+.main-nav a:hover {
+  color: blue;
+}
+
+.hamburger-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button.stream-link {
+  border: 0.0625rem solid black;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  background-color:white;
+  cursor: pointer;
+  box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 60%);
+  font: inherit;
+}
+
+button.stream-link:hover {
+  color: gray;
+  background-color: black;
+}
+
+section#CTA {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section#gallery {
+  display:flex; 
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content:center;
+  max-width: 700px;
+}
+
+img.gallery-photo {
+  width: 40%;
+  border-radius: 1rem;
+  margin: 1rem;
+  object-fit: cover;
+}
+
+div#content-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section#news {
+  max-width: 700px;
+}
+
+div.stream-modal {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  background-color: rgba(255,255,255, 0.9);
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+div.stream-modal.active {
+  display: flex;
+  left: 0%;
+}
+
+div.stream-modal-content {
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid black;
+  margin: 3rem;
+  background-color: white;
+  max-width: 700px;
+  width: 90%;
+}
+
+div.stream-modal-content a {
+  text-align: center;
+  padding: 1rem;
+}
+
+div#exit-icon {
+  width: 100%;
+  margin: 0.5rem;
+}
+
+section#listen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+section#listen div{
+  margin: 1rem;
+}
+
+
+
+@media screen and (max-width: 575px) {
+  main {
+    height: 93%;
+    justify-content: space-between;
+  }
+
+  body{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  div#content-div {
+    overflow-y: scroll;
+  }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255, 0.9);
+    padding-top: 3.5rem;
+  }
+
+  .main-nav.active {
+    display: flex;
+    left: 0%;
+  }
+  .main-nav div{
+    border: 0.0625rem solid black;
+    margin: 3rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-nav a {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+  }
+img.gallery-photo {
+  width: 80%;
+}
 }

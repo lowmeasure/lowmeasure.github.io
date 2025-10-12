@@ -4,22 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Low Measure</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/images/lm_site_icon.png"/>
 </head>
 
 <body>
-  <main>
-    <h1>Low Measure</h1> 
-    {{ content }}
-  <footer>
-    <nav id="links">
-        <a href="https://www.lowmeasure.bandcamp.com">Bandcamp</a>
-        <a href="https://open.spotify.com/artist/12hThedPf8GTjx6Jvn3RxL?si=JmLCq5cBSyGvF-y0DPizdQ&nd=1&dlsi=853daad7ebe0465a">Spotify</a>
-        <a href="https://www.instagram.com/lowmeasure">Instagram </a>
-        <a href="https://www.youtube.com/channel/UCZXzBSnf0xNtIJHkO5ZvRig">Youtube</a>
+  <header>
+    <div class="hamburger-icon" id="hamburger-icon">
+      &#9776;
+    </div>
+    <nav class="main-nav" id="main-nav">
+      <div id="nav-div">
+        <a href="/listen" class="link">Listen</a>
+        <a href="/public-appearances" class="link">Public Appearances</a>
+        <a href="/news" class="link">News</a>
+        <a href="/gallery" class="link">Gallery</a>
+      </div>
     </nav>
-  </footer>
+  </header>
+  <main>
+    <a href="/" class="link"><h1>Low Measure</h1></a>
+    <div id="content-div">
+      {{ content }}
+    </div>
+    <footer>
+      <nav id="footer-links">
+          <a href="https://lowmeasure.bandcamp.com/" class="link">Bandcamp</a>
+          <a href="https://open.spotify.com/artist/12hThedPf8GTjx6Jvn3RxL?si=JmLCq5cBSyGvF-y0DPizdQ&nd=1&dlsi=853daad7ebe0465a" class="link">Spotify</a>
+          <a href="https://www.instagram.com/lowmeasure" class="link">Instagram </a>
+          <a href="https://www.youtube.com/channel/UCZXzBSnf0xNtIJHkO5ZvRig" class="link">Youtube</a>
+      </nav>
+    </footer>
   </main>
   <script src="/assets/js/script.js"></script>
 </body>
