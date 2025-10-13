@@ -32,8 +32,6 @@ h3.section-label {
   text-align: center;
 }
 
-
-
 footer {
   display: flex;
   justify-content: center;
@@ -43,7 +41,7 @@ nav#footer-links {
   display: flex;
   flex-direction: row;
   border-bottom: 0.0625rem solid black;
-  margin: 2rem;
+  margin: 0.5 1rem 1rem 1rem;
   flex-wrap: wrap;
 }
 
@@ -149,6 +147,7 @@ div.stream-modal {
   height: 100%;
   width: 100%;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 div.stream-modal.active {
@@ -205,6 +204,7 @@ section#listen div{
   }
   .main-nav {
     display: none;
+    justify-content: center;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -212,7 +212,6 @@ section#listen div{
     height: 100%;
     width: 100%;
     background-color: rgba(255,255,255, 0.9);
-    padding-top: 3.5rem;
   }
 
   .main-nav.active {
@@ -239,7 +238,11 @@ section#listen div{
     right: 1rem;
     z-index: 1000;
   }
-img.gallery-photo {
-  width: 80%;
-}
+  img.gallery-photo {
+    width: 80%;
+  }
+
+  div.stream-modal {
+    justify-content: center;
+  }
 }

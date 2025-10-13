@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const streamMenu = document.getElementById("stream-modal-content");
 
   hamburger.addEventListener('click', function() {
-    if(!streamModal.classList.contains("active"))
+    if(streamModal == null || !streamModal.classList.contains("active"))
       mainNav.classList.toggle('active');
   });
 
   document.addEventListener("click", function() {
-    if((streamModal.contains(event.target) || hamburger.contains(event.target)) && streamModal.classList.contains("active") && !streamMenu.contains(event.target)){
+    if( streamModal != null && (streamModal.contains(event.target) || hamburger.contains(event.target)) && streamModal.classList.contains("active") && !streamMenu.contains(event.target)){
       console.log("passed")
       streamModal.classList.remove('active');
     }
